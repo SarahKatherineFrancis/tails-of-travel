@@ -4,7 +4,7 @@
 <ul>
   <% @blog.comments.each do |comment| %>
     <li>
-      <strong><%= comment.user.email %></strong> said:<br>
+      <strong><%= comment.user.first_name %></strong> said:<br>
       <%= comment.content %>
     </li>
   <% end %>
