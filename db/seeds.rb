@@ -1,5 +1,6 @@
 # Create a user
 user = User.create!(email: 'mail@mail.com', password: '123123', password_confirmation: '123123')
+bot = User.create!(email: 'test@test.com', password: '123123', password_confirmation: '123123')
 
 # Create some blog posts for the user
 Blog.create!(title: "My Trip to the Beach", content: "I had a great time at the beach with my dog. We played in the
@@ -12,3 +13,6 @@ Trip.create!(name: "Dog-Friendly Beaches in California", description: "Explore t
   California.", location: "California")
 Trip.create!(name: "Hiking with Dogs in Colorado", description: "Discover the best hiking trails in Colorado to explore
   with your dog.", location: "Colorado")
+
+Comment.create!(content: "Great post, thanks for sharing!", user: bot, blog_id: 1)
+Comment.create!(content: "I can't wait to go here!", user: bot, blog_id: 2)

@@ -1,0 +1,12 @@
+<h1><%= @blog.title %></h1>
+<p><%= @blog.content %></p>
+<h2>Comments</h2>
+<ul>
+  <% @blog.comments.each do |comment| %>
+    <li>
+      <strong><%= comment.user.email %></strong> said:<br>
+      <%= comment.content %>
+    </li>
+  <% end %>
+</ul>
+<%= render "comments/form" %>
