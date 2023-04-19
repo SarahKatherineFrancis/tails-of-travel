@@ -1,7 +1,9 @@
+<%= render "shared/hero" %>
 <h1>All Blog Posts</h1>
 <ul>
   <% @blogs.each do |blog| %>
     <li>
+      <%= image_tag blog.main_photo %>
       <%= link_to blog.title, blog_path(blog) %><br>
       <%= blog.content %>
     </li>
